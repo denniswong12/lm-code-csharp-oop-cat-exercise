@@ -6,6 +6,8 @@
 		public int AverageHeight;
 		public string Setting;
 
+        public abstract string Eat();
+
         public void GoToSleep()
         {
             IsAsleep = true;
@@ -14,11 +16,6 @@
         public void WakeUp()
         {
             IsAsleep = false;
-        }
-
-        public virtual string Eat()
-        {
-			return "";
         }
 	}
 }

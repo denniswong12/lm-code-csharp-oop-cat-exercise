@@ -1,5 +1,8 @@
 ﻿using NUnit.Framework;
 using FluentAssertions;
+using Microsoft.VisualStudio.TestPlatform.Utilities;
+using Newtonsoft.Json.Linq;
+using System;
 
 namespace OopCatExercise.Tests;
 
@@ -68,6 +71,7 @@ public class CatTests
     public void DomesticCat_Should_Make_A_Sound_When_Eat_Is_Called()
     {
         DomesticCat domesticCat = new();
-        domesticCat.Eat().Should().Be("Purrrrrrr");
+        string domesticCatSound = domesticCat.Eat();
+        Assert.IsTrue(domesticCatSound.Equals("Purrrrrrr") || domesticCatSound.Equals("It will do I suppose"));
     }
 }
