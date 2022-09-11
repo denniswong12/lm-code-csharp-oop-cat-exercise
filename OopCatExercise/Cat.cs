@@ -2,9 +2,15 @@
 {
 	public abstract class Cat : ICat
 	{
-		public bool IsAsleep = false;
-		public int AverageHeight;
-		public string Setting;
+		public bool IsAsleep { get; private set; }
+		public int AverageHeight { get; private set; }
+		public string Setting { get; private set; }
+
+        protected Cat(int averageHeight, string setting)
+        {
+            AverageHeight = averageHeight;
+            Setting = setting;
+        }
 
         public abstract string Eat();
 

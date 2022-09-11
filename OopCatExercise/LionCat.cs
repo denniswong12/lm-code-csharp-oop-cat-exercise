@@ -2,10 +2,8 @@
 {
     public class LionCat : Cat
     {
-        public LionCat()
+        public LionCat() : base(averageHeight: 1100, setting: "wild")
         {
-            Setting = "wild";
-            AverageHeight = 1100;
         }
 
         public override string Eat()
